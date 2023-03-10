@@ -120,6 +120,7 @@ const MainCollection = () => {
 
                     <div className="col_content" >
                         {Coll_Content.map((it, idx) => {
+
                             return (
                                 <div className={`col_con_box content_box0${idx + 1}`} key={idx} style={{ display: conIdx === idx ? 'block' : 'none' }}>
                                     <div className="left">

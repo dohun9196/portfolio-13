@@ -1,9 +1,20 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+
+
 const Footer = () => {
+
+    const [on, setOn] = useState(true);
+
+    const toggleFamily = () => {
+        setOn(!on);
+    }
     return (
         <footer className="footer">
             <div className="inner">
-                <div className="lfet">
-                    <img src={process.env.PUBLIC_URL + `/img/logo-footer.png`} alt="" />
+                <div className="left">
+                    <img src={process.env.PUBLIC_URL + `/img/logo.png`} alt="" />
                 </div>
                 <div className="center">
                     <ul className="f_banner">
@@ -14,22 +25,37 @@ const Footer = () => {
                     <address>
                         <span>대표자:박식순</span>
                         <span>사업자등록번호 : 365-85-01709</span>
-                        <span>주소 : 경기도 이천시 장호원읍 서동대로 8798-50</span>
                         <span>대표번호 : 031-642-6111</span>
+                        <span>주소 : 경기도 이천시 장호원읍 서동대로 8798-50</span>
+
+
+                        <div className="copy">
+                            &copy; 2022 KSWALLCOVERINGS ALL Rights Reserved. Created by masstige
+                        </div>
                     </address>
-                    <div className="copy">
-                        &copy; 2022 KSWALLCOVERINGS ALL Rights Reserved. Created by masstige
-                    </div>
                 </div>
                 <div className="right">
-                    <ul className="famliy">
-                        <li>패밀리사이트
-
-                        </li>
-                    </ul>
+                    <div className="famliy">
+                        <button onClick={toggleFamily}><span>패밀리사이트</span><i className="xi-plus"></i></button>
+                        <div className={`famliy_wrap ${on ? 'on' : ''}`}>
+                            <div className="f_box">
+                                <strong>패밀리사이트</strong>
+                                <p>KS벽지 패밀리 사이트를 소개합니다.<br />
+                                    아래계열사를 선택하시면 해당 홈페이지로 이동합니다.</p>
+                                <div className="link_box">
+                                    <Link to='/'>KS더블유</Link>
+                                    <Link to='/'>제일벽지</Link>
+                                    <Link to='/'>케이엔피이노텍</Link>
+                                    <Link to='/'>코스모스벽지</Link>
+                                    <Link to='/'>케이엔피물류</Link>
+                                </div>
+                                <i className="xi-close" onClick={toggleFamily}></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </footer >
     )
 }
 

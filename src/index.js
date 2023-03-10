@@ -6,7 +6,7 @@ import './css/basic.css';
 import './css/font.css';
 import './css/common.css';
 import './css/main.css';
-
+import './css/sub.css';
 
 import App from './App';
 import ScrollToTop from './components/ScrollToTop';

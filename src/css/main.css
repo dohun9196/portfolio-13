@@ -84,6 +84,7 @@
     position: absolute;
     display: none;
     padding: 30px 0 0 0;
+    width: 100%;
 }
 
 .header .inner:hover .gnb .drop_menu {
@@ -303,7 +304,7 @@
 .col_content .col_con_box .left {
     float: left;
     width: 68%;
-    height: 650px;
+    height: 600px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -316,7 +317,7 @@
     vertical-align: middle;
     float: right;
     width: 30%;
-    height: 650px;
+    height: 600px;
 }
 
 .col_content .col_con_box .right strong {
@@ -359,7 +360,7 @@
 
 .col_content .col_con_box .right .r_img_box figure img {
     width: 100%;
-    height: 100%;
+    height: 50%;
     margin: 0 0 10px 0;
 }
 
@@ -394,4 +395,200 @@
 
 .col_content .content_box05 .left {
     background-image: url(../../public/img/mainCollection_Silk05.jpg);
+}
+
+.MainNews {
+    background: #f6f6f6;
+}
+
+.MainNews .news_wrap {
+    display: flex;
+    gap: 30px;
+}
+
+.MainNews .news_wrap .left {
+    flex: 1 0 50%;
+    max-width: 50%;
+}
+
+
+.MainNews .news_wrap .right {
+    flex: 1 0 50%;
+    max-width: 50%;
+}
+
+.MainNews .news_wrap .left {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.MainNews .news_wrap .left a {
+    display: flex;
+    gap: 10px;
+}
+
+.MainNews .news_wrap .left a figure {
+    flex: 1 0 30%;
+}
+
+.MainNews .news_wrap .left .news_text {
+    padding: 30px 0;
+}
+
+.MainNews .news_wrap .right a figure {
+    margin: 0 0 30px 0;
+}
+
+.MainNews .news_wrap .right a figure img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+}
+
+.footer {
+
+    padding: 50px 0;
+    border-top: 1px solid#ddd;
+}
+
+.footer .inner {
+    position: relative;
+    display: flex;
+    gap: 90px;
+    justify-content: space-between;
+}
+
+.footer .inner .left img {
+    width: 120px;
+}
+
+.footer .inner .center {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .inner .center .f_banner {
+
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    margin: 0 0 20px 0;
+}
+
+.footer .inner .center .f_banner li {
+    position: relative;
+}
+
+.footer .inner .center .f_banner li:first-child {
+    font-weight: 500;
+}
+
+.footer .inner .center .f_banner li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%, -50%);
+
+    width: 1px;
+    height: 12px;
+    background: #555;
+}
+
+.footer .inner .center address {
+
+    font-weight: 300;
+}
+
+.footer .inner .center address span {
+    display: inline-block;
+    margin: 0 30px 0 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.footer .inner .center address .copy {
+    margin-top: 20px;
+}
+
+.footer .inner .right {
+    flex: 1 0 15%;
+}
+
+.footer .inner .right .famliy button {
+    float: right;
+    background: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer .inner .right .famliy button span {
+    margin: 0 20px 0 0;
+}
+
+.footer .inner .right .famliy button i {
+    font-size: 15px;
+
+}
+
+.footer .inner .right .famliy .famliy_wrap {
+    display: block;
+    position: absolute;
+    top: -225px;
+    right: 0;
+    width: 500px;
+}
+
+.footer .inner .right .famliy .famliy_wrap.on {
+    display: none;
+}
+
+.footer .inner .right .famliy .famliy_wrap .f_box {
+    position: relative;
+    padding: 50px;
+    background: #fff;
+    border: 1px solid #333;
+}
+
+.footer .inner .right .famliy .famliy_wrap .f_box strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.footer .inner .right .famliy .famliy_wrap .f_box p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.3;
+    margin: 0 0 20px 0;
+    font-weight: 300;
+}
+
+.footer .inner .right .famliy .famliy_wrap .f_box .link_box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer .inner .right .famliy .famliy_wrap .f_box .link_box a {
+    display: block;
+    flex: 1 0 40%;
+
+    font-size: 15px;
+}
+
+.footer .inner .right .famliy .famliy_wrap .f_box i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
 }

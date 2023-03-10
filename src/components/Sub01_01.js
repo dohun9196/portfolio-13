@@ -1,7 +1,38 @@
-const Sub01_01 = () => {
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SubHeader from "./SubHeader";
+import SubNav from './SubNav';
+const Sub01_01 = ({ SubHeaderData, KSW }) => {
+    console.log('배열', KSW);
     return (
         <>
-            aaa
+            <SubHeader SubHeaderData={SubHeaderData} />
+            <SubNav SubHeaderData={SubHeaderData} />
+            <section className='SubPage01_01 sec50'>
+                <div className="inner">
+                    <div className="sp_tit">
+                        <h2>{KSW[0].MainTitle}</h2>
+                    </div>
+                    <div className="ksw_">
+                        {
+                            KSW[0].SubContent.map((it, idx) => {
+                                return (
+                                    <Link to={it.Lik} key={idx}>
+                                        <div className='sp_content_text sp01'>
+                                            <strong>{it.Title}</strong>
+                                            <img src={process.env.PUBLIC_URL + it.Src[0].Img0} alt="" />
+                                            <p>{it.Desc}</p>
+                                        </div>
+                                        <figure className='sp_content_fig sp01'>
+                                            <img src={process.env.PUBLIC_URL + it.Src[1].Img1} alt="" />
+                                        </figure>
+                                    </Link>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
