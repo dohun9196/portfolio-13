@@ -15,9 +15,9 @@ const Sub02_01 = ({ SubHeaderData, Brand, BrandSub, History }) => {
             <SubNav SubHeaderData={SubHeaderData} />
             <section className='SubPage02_01 sec50'>
                 <div className="inner">
-                    {/* <div className="sp_tit">
+                    <div className="sp_tit">
                         <h2>KS Company</h2>
-                    </div> */}
+                    </div>
                     <ul className="company_nav">
                         <li
                             className={on === 0 ? "on" : ""}
@@ -35,7 +35,7 @@ const Sub02_01 = ({ SubHeaderData, Brand, BrandSub, History }) => {
                 </div>
 
                 {on === 0 && (
-                    <div className="brand_wrap">
+                    <div class="brand_wrap">
                         <div className="sp_content_text sp02_01">
                             <div className="inner">
                                 {
@@ -69,8 +69,8 @@ const Sub02_01 = ({ SubHeaderData, Brand, BrandSub, History }) => {
                                     {
                                         BrandSub[0].SubContent.map((it, idx) => {
                                             return (
-                                                <div className="corporat_box" key={idx}>
-                                                    <div className="left">
+                                                <div className="corporat_box">
+                                                    <div class="left">
                                                         <span>{it.Title}</span>
                                                         <p>  {`${it.Desc.substring(0, 23)}`}
                                                             <br />
@@ -90,33 +90,8 @@ const Sub02_01 = ({ SubHeaderData, Brand, BrandSub, History }) => {
                 )}
 
                 {on === 1 && (
-                    <div className="history_wrap">
-                        <div className="inner">
-                            <div className="sp_tit">
-                                <h2>{History[0].MainTitle}</h2>
-                            </div>
-                            <div className="history_flex">
-                                {History[0].SubContent.map((it, idx) => {
-                                    return (
-                                        <div className={`his_box _box0${idx + 1}`} key={idx}>
-                                            <div className="his_year">
-                                                <span>{it.Year}</span>
-                                            </div>
-                                            <div className="his_content">
-                                                {it.Month.map((month, idx) => {
-                                                    return (
-                                                        <div className="Month" key={idx}>
-                                                            <strong>{month.Date}</strong>
-                                                            <p>{month.Desc}</p>
-                                                        </div>
-                                                    )
-                                                })}
-                                            </div>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
+                    <div class="history_wrap">
+                        연혁넣음
                     </div>
                 )}
             </section>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Router, Route, Routes } from "react-router-dom";
 import { Nav, MainVisual, Collection, News } from './data/Data';
-import { SubHeaderData, KSW, Brand, BrandSub, History, CEO, LOGO, Product, BrandNAV01, BrandContent01, BrandNAV02, BrandContent02 } from './data/SubPageData';
+import { SubHeaderData, KSW, Brand, BrandSub, History, CEO, Product, BrandNAV01, BrandContent01, BrandNAV02, BrandContent02 } from './data/SubPageData';
 
 import Header from './components/Header';
 import Main from './components/Main';
@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/Sub02_02"
           element={<Sub02_02 SubHeaderData={SubHeaderData} CEO={CEO} />} />
         <Route path="/Sub02_03"
-          element={<Sub02_03 SubHeaderData={SubHeaderData} LOGO={LOGO} />} />
+          element={<Sub02_03 SubHeaderData={SubHeaderData} />} />
         <Route path="/Sub02_04"
           element={<Sub02_04 SubHeaderData={SubHeaderData} />} />
         <Route path="/Sub02_05"

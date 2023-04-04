@@ -43,7 +43,7 @@ const Main = ({ MainVisual, Collection, News }) => {
                                             <p>{it.Desc}</p>
                                             <span>{it.SubText}</span>
                                         </div>
-                                        <div className="right">
+                                        <div class="right">
                                             <img src={process.env.PUBLIC_URL + `/img/MainVisual0${idx + 1}.jpg`} alt="" />
                                         </div>
                                     </figure>

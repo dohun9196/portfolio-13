@@ -43,7 +43,7 @@ const SubNav = ({ SubHeaderData }) => {
                             <li key={idx} className={Lik_on}>
                                 {/* 클릭하면 li에 .on 붙이기 */}
                                 <Link to={it.Lik} onClick={() => handleItemClick(it.idx)}>
-                                    {it.NavTitle}
+                                    {it.Title}
                                 </Link>
                             </li>
                         );
