@@ -1,23 +1,38 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import { BsChevronRight, BsChevronLeft, BsPauseCircle } from "react-icons/bs";
+import { BsChevronRight, BsChevronLeft, BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import MainCollection from './MainCollection';
+import styled from "styled-components";
 
 const Main = ({ MainVisual, Collection, News }) => {
 
+
+    const [Playing, setPlaying] = useState(true);
+
+    const pauseHandler = () => {
+        M_Slide.current.slickPause();
+        setPlaying(true);
+    };
+
+    const playHandler = () => {
+        M_Slide.current.slickPlay();
+        setPlaying(false);
+    };
     const MainSlide = {
-        dots: true,
+        dots: false,
         infinite: true,
-        speed: 500,
+        speed: 1000,
+        autoplaySpeed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
         // arrows: false,
         fade: true,
         nextArrow: <BsChevronRight />,
         prevArrow: <BsChevronLeft />,
-        slickPause: <BsPauseCircle />,
+        slickPause: <BsFillPauseFill onClick={pauseHandler} />,
+        slickPlay: <BsFillPlayFill onClick={playHandler} />,
         afterChange: idx => setSNum(idx),
     };
 
@@ -27,7 +42,15 @@ const Main = ({ MainVisual, Collection, News }) => {
     useEffect(() => {
         setSNum(0);
     }, [])
-
+    const Slide_btn = styled.div`
+    position: absolute;
+    top: 65%;
+    left: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 100;
+    cursor: pointer;
+`
 
     return (
         <>
@@ -55,6 +78,16 @@ const Main = ({ MainVisual, Collection, News }) => {
                         <em>{MainVisual[0].SlideText}</em>
                         <strong>0{(sNum + 1)}</strong><span>0{MainVisual.length}</span>
                     </div>
+                    <Slide_btn>
+                        {
+                            Playing ? (
+                                <BsFillPlayFill onClick={playHandler} />
+
+                            ) : (
+                                <BsFillPauseFill onClick={pauseHandler} />
+                            )
+                        }
+                    </Slide_btn>
                 </div>
             </section>
 

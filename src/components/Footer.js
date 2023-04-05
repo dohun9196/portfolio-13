@@ -23,7 +23,7 @@ const Footer = () => {
                         <li>이용약관</li>
                     </ul>
                     <address>
-                        <span>대표자:박식순</span>
+                        <span>대표자 : 박식순</span>
                         <span>사업자등록번호 : 365-85-01709</span>
                         <span>대표번호 : 031-642-6111</span>
                         <span>주소 : 경기도 이천시 장호원읍 서동대로 8798-50</span>
@@ -44,10 +44,10 @@ const Footer = () => {
                                     아래계열사를 선택하시면 해당 홈페이지로 이동합니다.</p>
                                 <div className="link_box">
                                     <Link to='/'>KS더블유</Link>
-                                    <Link to='/'>제일벽지</Link>
-                                    <Link to='/'>케이엔피이노텍</Link>
-                                    <Link to='/'>코스모스벽지</Link>
-                                    <Link to='/'>케이엔피물류</Link>
+                                    <Link to='https://www.jeilwallpaper.com/' target="_blink">제일벽지</Link>
+                                    <Link to='#'>케이엔피이노텍</Link>
+                                    <Link to='http://www.cosmoswa.co.kr/' target="_blink">코스모스벽지</Link>
+                                    <Link to='#'>케이엔피물류</Link>
                                 </div>
                                 <i className="xi-close" onClick={toggleFamily}></i>
                             </div>

@@ -21,26 +21,26 @@ export const Nav = [
         ]
     },
     {
-        NavTitle: "홍보센터", Lik: "/Sub04_01", Submenu: [
-            { Title: "인증 및 수상", Lik: "/Sub04_01" },
-            { Title: "뉴스 및 언론홍보", Lik: "/Sub04_02" },
-            { Title: "SNS", Lik: "/Sub04_03" },
-            { Title: "이벤트", Lik: "/Sub04_04" },
+        NavTitle: "홍보센터", Lik: "#", Submenu: [
+            { Title: "인증 및 수상", Lik: "#" },
+            { Title: "뉴스 및 언론홍보", Lik: "#" },
+            { Title: "SNS", Lik: "#" },
+            { Title: "이벤트", Lik: "#" },
         ]
     },
     {
-        NavTitle: "인테리어", Lik: "/Sub05_01", Submenu: [
-            { Title: "시공사례", Lik: "/Sub05_01" },
-            { Title: "인테리어", Lik: "/Sub05_02" },
-            { Title: "스타일링", Lik: "/Sub05_03" },
+        NavTitle: "인테리어", Lik: "#", Submenu: [
+            { Title: "시공사례", Lik: "#" },
+            { Title: "인테리어", Lik: "#" },
+            { Title: "스타일링", Lik: "#" },
         ]
     },
     {
-        NavTitle: "고객센터", Lik: "/Sub06_01", Submenu: [
-            { Title: "공지사항", Lik: "/Sub06_01" },
-            { Title: "디자인상담", Lik: "/Sub06_02" },
-            { Title: "1:1문의", Lik: "/Sub06_03" },
-            { Title: "대리점 찾기", Lik: "/Sub06_04" },
+        NavTitle: "고객센터", Lik: "#", Submenu: [
+            { Title: "공지사항", Lik: "#" },
+            { Title: "디자인상담", Lik: "#" },
+            { Title: "1:1문의", Lik: "#" },
+            { Title: "대리점 찾기", Lik: "#" },
         ]
     },
 ];

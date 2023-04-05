@@ -18,8 +18,8 @@ const SubNav = ({ SubHeaderData }) => {
     // 현재 페이지의 주소를 가져와서, 첫 번째 / 로 시작하는 문자열을 추출
     // window.location.pathname는 ex) https://dohun9196.github.io/link/Sub01_01 경우 /link/Sub01_01의 값이다.
     // split('/')을 쓰면 ['','link','Sub01_01']이 반환된다, split('/')[1]을 쓰면 link가 반환한다, 
-    // 배포시 Sub01_01 값을 반환해야하기에, split('/')[] 값을 수정해야함
-
+    // 배포시 Sub01_01 값을 반환해야하기에, split('/')[1] 로 수정
+    // 제작시 split('/')[2] 로 수정
     const SubPage = window.location.pathname.split('/')[1];
 
     // Filtering 변수에 클릭한 페이지의 주소 값과 일치하는 데이터 저장

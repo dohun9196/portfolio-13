@@ -1,18 +1,52 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 import SubHeader from "./SubHeader";
 import SubNav from './SubNav';
-const Sub02_05 = ({ SubHeaderData, KAKAO_Map }) => {
 
-    const [on, setOn] = useState(0)
+
+const Sub02_05 = ({ SubHeaderData }) => {
+
+    const { kakao } = window;
+
+    const [m_ks, setM_ks] = useState(false);
+    const [loc_list, setLoc_list] = useState([
+        new kakao.maps.LatLng(37.11329826525148, 127.61384241769963),
+        new kakao.maps.LatLng(37.47548428822684, 126.88193063897485)
+    ])
+
+    useEffect(() => {
+        var container = document.getElementById('map'); // 지도 담기
+        var options = {
+            center: loc_list[on],
+            level: 3
+        };
+        var map = new kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
+
+        // 마커가 표시될 위치입니다 
+        var markerPosition = loc_list[on];
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        marker.setMap(map);
+    }, [m_ks]);
+
+
+
+
+    const [on, setOn] = useState(0);
     const LOCATION_TAP = (idx) => {
         setOn(idx);
+        setM_ks(!m_ks)
     }
+
+
     return (
         <>
             <SubHeader SubHeaderData={SubHeaderData} />
             <SubNav SubHeaderData={SubHeaderData} />
-            <section className='SubPage02_05 sec50'>
+            <section className='SubPage02_05 sec'>
                 <div className="inner">
                     <div className="sp_tit">
                         <h2>위치안내</h2>
@@ -33,7 +67,7 @@ const Sub02_05 = ({ SubHeaderData, KAKAO_Map }) => {
                     </ul>
                     {on === 0 && (
                         <div className="Factory">
-                            카카오 api 아직 안넣음
+                            <div id='map' style={{ width: '1200px', height: '500px' }}></div>
                             <div className="location_text">
                                 <strong>KS벽지 공장</strong>
                                 <span>경기 이천시 장호원읍 서동대로 8798-50</span>
@@ -43,7 +77,7 @@ const Sub02_05 = ({ SubHeaderData, KAKAO_Map }) => {
                     )}
                     {on === 1 && (
                         <div className="Seoul_office">
-                            카카오 api 아직 안넣음
+                            <div id='map' style={{ width: '1200px', height: '500px' }}></div>
                             <div className="location_text">
                                 <strong>  KS벽지 서울사무소</strong>
                                 <span>서울특별시 금천구 디지털로 130 남성프라자 913호</span>

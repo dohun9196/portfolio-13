@@ -7,7 +7,7 @@ const Sub02_03 = ({ SubHeaderData, LOGO }) => {
         <>
             <SubHeader SubHeaderData={SubHeaderData} />
             <SubNav SubHeaderData={SubHeaderData} />
-            <section className='SubPage02_03 sec50'>
+            <section className='SubPage02_03 sec'>
                 <div className="inner">
                     <div className="sp_tit">
                         <h2>{LOGO[0].MainTitle}</h2>

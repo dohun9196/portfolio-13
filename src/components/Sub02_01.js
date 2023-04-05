@@ -13,7 +13,7 @@ const Sub02_01 = ({ SubHeaderData, Brand, BrandSub, History }) => {
         <>
             <SubHeader SubHeaderData={SubHeaderData} />
             <SubNav SubHeaderData={SubHeaderData} />
-            <section className='SubPage02_01 sec50'>
+            <section className='SubPage02_01 sec'>
                 <div className="inner">
                     {/* <div className="sp_tit">
                         <h2>KS Company</h2>
@@ -48,7 +48,7 @@ const Sub02_01 = ({ SubHeaderData, Brand, BrandSub, History }) => {
                                                     <br />
                                                     {`${it.Desc.substring(50)}`}</p>
                                                 <figure>
-                                                    <img src={it.Img} alt="" />
+                                                    <img src={process.env.PUBLIC_URL + it.Img} alt="" />
                                                 </figure>
                                             </div>
                                         )
@@ -77,7 +77,7 @@ const Sub02_01 = ({ SubHeaderData, Brand, BrandSub, History }) => {
                                                             {`${it.Desc.substring(23)}`}</p>
                                                     </div>
                                                     <figure>
-                                                        <img src={it.Img} alt="" />
+                                                        <img src={process.env.PUBLIC_URL + it.Img} alt="" />
                                                     </figure>
                                                 </div>
                                             )

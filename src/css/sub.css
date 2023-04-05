@@ -33,8 +33,8 @@
 
 .sub_nav .inner .sub_nav_list>li>a {
     display: block;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 300;
     padding: 20px 40px;
 }
 
@@ -50,7 +50,6 @@
 }
 
 .SubPage01_01 .inner .ksw_ a .sp_content_text.sp01 {
-    height: 190px;
     margin: 0 0 30px 0;
 }
 
@@ -67,8 +66,8 @@
     display: block;
     text-align: center;
     width: 150px;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 300;
     margin: 0 0 30px 0;
     letter-spacing: 1.5px;
     cursor: pointer;
@@ -311,8 +310,8 @@
     display: block;
     text-align: center;
     width: 150px;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 300;
     margin: 0 0 30px 0;
     letter-spacing: 1.5px;
     cursor: pointer;
@@ -337,7 +336,6 @@
 .SubPage02_05 .Factory,
 .SubPage02_05 .Seoul_office {
     position: relative;
-    height: 20vh;
 }
 
 .location_text {
@@ -350,6 +348,7 @@
     text-align: center;
     color: #fff;
     padding: 40px 30px;
+    z-index: 999;
 }
 
 .location_text strong {
