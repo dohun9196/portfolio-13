@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import React from 'react';
 import SubHeader from "./SubHeader";
@@ -241,3 +242,19 @@ const Sub03_02 = ({ SubHeaderData, BrandNAV01, BrandContent01 }) => {
 }
 
 export default Sub03_02;
+=======
+import React from 'react';
+import SubHeader from "./SubHeader";
+import SubNav from './SubNav';
+const Sub03_02 = ({ SubHeaderData, KSW }) => {
+    return (
+        <>
+            <SubHeader SubHeaderData={SubHeaderData} />
+            <SubNav SubHeaderData={SubHeaderData} />
+
+        </>
+    )
+}
+
+export default Sub03_02;
+>>>>>>> 71274d17d50e357c313904cbb8bd416b1fcb7a5b

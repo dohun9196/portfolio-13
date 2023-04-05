@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SubHeader from "./SubHeader";
 import SubNav from './SubNav';
@@ -54,4 +55,19 @@ const Sub02_04 = ({ SubHeaderData }) => {
     )
 }
 
+=======
+import React from 'react';
+import SubHeader from "./SubHeader";
+import SubNav from './SubNav';
+const Sub02_04 = ({ SubHeaderData, KSW }) => {
+    return (
+        <>
+            <SubHeader SubHeaderData={SubHeaderData} />
+            <SubNav SubHeaderData={SubHeaderData} />
+
+        </>
+    )
+}
+
+>>>>>>> 71274d17d50e357c313904cbb8bd416b1fcb7a5b
 export default Sub02_04;

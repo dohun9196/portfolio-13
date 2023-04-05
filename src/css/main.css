@@ -84,7 +84,6 @@
     position: absolute;
     display: none;
     padding: 30px 0 0 0;
-    width: 100%;
 }
 
 .header .inner:hover .gnb .drop_menu {
